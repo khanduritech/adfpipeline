@@ -1,0 +1,12 @@
+{
+	"name": "az_dest_prod",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Az_dest_prod",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
