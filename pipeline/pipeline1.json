@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "cn-adf//Product.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.@{pipeline().parameters.tablenamefrompipeline}"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
