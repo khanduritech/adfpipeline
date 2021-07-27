@@ -14,6 +14,18 @@
 		"Az_dest_prod_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Az_dest_prod'"
+		},
+		"trg_schd_properties_pipeline1_parameters_dbnamefrompipeline": {
+			"type": "string",
+			"defaultValue": "DB_Adf_SIT"
+		},
+		"trg_schd_properties_pipeline1_parameters_servernamefrompipeline": {
+			"type": "string",
+			"defaultValue": "db-srv-prod"
+		},
+		"trg_schd_properties_pipeline1_parameters_tablenamefrompipeline": {
+			"type": "string",
+			"defaultValue": "product"
 		}
 	},
 	"variables": {
@@ -275,6 +287,40 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/del_csv_src')]",
 				"[concat(variables('factoryId'), '/datasets/az_dest_prod')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trg_schd')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pipeline1",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"dbnamefrompipeline": "[parameters('trg_schd_properties_pipeline1_parameters_dbnamefrompipeline')]",
+							"servernamefrompipeline": "[parameters('trg_schd_properties_pipeline1_parameters_servernamefrompipeline')]",
+							"tablenamefrompipeline": "[parameters('trg_schd_properties_pipeline1_parameters_tablenamefrompipeline')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 2,
+						"startTime": "2021-07-27T03:52:00Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pipeline1')]"
 			]
 		}
 	]

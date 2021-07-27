@@ -15,6 +15,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Az_dest_prod'"
 		},
+		"trg_schd_properties_pipeline1_parameters_dbnamefrompipeline": {
+			"type": "string",
+			"defaultValue": "DB_Adf_SIT"
+		},
+		"trg_schd_properties_pipeline1_parameters_servernamefrompipeline": {
+			"type": "string",
+			"defaultValue": "db-srv-prod"
+		},
+		"trg_schd_properties_pipeline1_parameters_tablenamefrompipeline": {
+			"type": "string",
+			"defaultValue": "product"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +59,15 @@
 					},
 					"Az_dest_prod_connectionString": {
 						"value": "[parameters('Az_dest_prod_connectionString')]"
+					},
+					"trg_schd_properties_pipeline1_parameters_dbnamefrompipeline": {
+						"value": "[parameters('trg_schd_properties_pipeline1_parameters_dbnamefrompipeline')]"
+					},
+					"trg_schd_properties_pipeline1_parameters_servernamefrompipeline": {
+						"value": "[parameters('trg_schd_properties_pipeline1_parameters_servernamefrompipeline')]"
+					},
+					"trg_schd_properties_pipeline1_parameters_tablenamefrompipeline": {
+						"value": "[parameters('trg_schd_properties_pipeline1_parameters_tablenamefrompipeline')]"
 					}
 				}
 			},
