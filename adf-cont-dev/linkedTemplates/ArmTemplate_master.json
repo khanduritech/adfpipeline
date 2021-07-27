@@ -7,25 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adf-cont-dev"
 		},
-		"Az_src_blob_prod_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'Az_src_blob_prod'"
-		},
 		"Az_dest_prod_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Az_dest_prod'"
 		},
-		"trg_schd_properties_pipeline1_parameters_dbnamefrompipeline": {
-			"type": "string",
-			"defaultValue": "DB_Adf_SIT"
-		},
-		"trg_schd_properties_pipeline1_parameters_servernamefrompipeline": {
-			"type": "string",
-			"defaultValue": "db-srv-prod"
-		},
-		"trg_schd_properties_pipeline1_parameters_tablenamefrompipeline": {
-			"type": "string",
-			"defaultValue": "product"
+		"Az_src_blob_prod_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Az_src_blob_prod'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -54,20 +42,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"Az_src_blob_prod_connectionString": {
-						"value": "[parameters('Az_src_blob_prod_connectionString')]"
-					},
 					"Az_dest_prod_connectionString": {
 						"value": "[parameters('Az_dest_prod_connectionString')]"
 					},
-					"trg_schd_properties_pipeline1_parameters_dbnamefrompipeline": {
-						"value": "[parameters('trg_schd_properties_pipeline1_parameters_dbnamefrompipeline')]"
-					},
-					"trg_schd_properties_pipeline1_parameters_servernamefrompipeline": {
-						"value": "[parameters('trg_schd_properties_pipeline1_parameters_servernamefrompipeline')]"
-					},
-					"trg_schd_properties_pipeline1_parameters_tablenamefrompipeline": {
-						"value": "[parameters('trg_schd_properties_pipeline1_parameters_tablenamefrompipeline')]"
+					"Az_src_blob_prod_connectionString": {
+						"value": "[parameters('Az_src_blob_prod_connectionString')]"
 					}
 				}
 			},

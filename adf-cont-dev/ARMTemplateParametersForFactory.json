@@ -5,20 +5,11 @@
 		"factoryName": {
 			"value": "adf-cont-dev"
 		},
-		"Az_src_blob_prod_connectionString": {
-			"value": ""
-		},
 		"Az_dest_prod_connectionString": {
 			"value": ""
 		},
-		"trg_schd_properties_pipeline1_parameters_dbnamefrompipeline": {
-			"value": "DB_Adf_SIT"
-		},
-		"trg_schd_properties_pipeline1_parameters_servernamefrompipeline": {
-			"value": "db-srv-prod"
-		},
-		"trg_schd_properties_pipeline1_parameters_tablenamefrompipeline": {
-			"value": "product"
+		"Az_src_blob_prod_connectionString": {
+			"value": ""
 		}
 	}
 }
