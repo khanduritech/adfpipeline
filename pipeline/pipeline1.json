@@ -60,6 +60,17 @@
 				]
 			}
 		],
+		"parameters": {
+			"dbnamefrompipeline": {
+				"type": "string"
+			},
+			"servernamefrompipeline": {
+				"type": "string"
+			},
+			"tablenamefrompipeline": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
