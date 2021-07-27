@@ -1,0 +1,12 @@
+{
+	"name": "Az_Srcf_Db",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Az_dest_prod",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
