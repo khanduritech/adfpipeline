@@ -65,10 +65,6 @@
 								"value": "@pipeline().parameters.dbnamefrompipeline",
 								"type": "Expression"
 							},
-							"dbserver": {
-								"value": "@pipeline().parameters.servernamefrompipeline",
-								"type": "Expression"
-							},
 							"tablename": {
 								"value": "@pipeline().parameters.tablenamefrompipeline",
 								"type": "Expression"
@@ -80,9 +76,6 @@
 		],
 		"parameters": {
 			"dbnamefrompipeline": {
-				"type": "string"
-			},
-			"servernamefrompipeline": {
 				"type": "string"
 			},
 			"tablenamefrompipeline": {
