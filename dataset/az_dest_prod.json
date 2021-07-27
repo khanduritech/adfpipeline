@@ -15,9 +15,6 @@
 			"dbname": {
 				"type": "string"
 			},
-			"dbserver": {
-				"type": "string"
-			},
 			"tablename": {
 				"type": "string"
 			}
