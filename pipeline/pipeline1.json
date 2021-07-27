@@ -52,9 +52,18 @@
 						"referenceName": "az_dest_prod",
 						"type": "DatasetReference",
 						"parameters": {
-							"dbname": "DB_Adf_SIT",
-							"dbserver": "db-srv-prod",
-							"tablename": "product"
+							"dbname": {
+								"value": "@pipeline().parameters.dbnamefrompipeline",
+								"type": "Expression"
+							},
+							"dbserver": {
+								"value": "@pipeline().parameters.servernamefrompipeline",
+								"type": "Expression"
+							},
+							"tablename": {
+								"value": "@pipeline().parameters.tablenamefrompipeline",
+								"type": "Expression"
+							}
 						}
 					}
 				]
