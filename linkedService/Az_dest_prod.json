@@ -1,0 +1,20 @@
+{
+	"name": "Az_dest_prod",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"dbname": {
+				"type": "string"
+			},
+			"dbserver": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=db-srv-prod.database.windows.net;initial catalog=DB_Adf_SIT;user id=ayushkh",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFERi1DT05ULURFVl8zOWM3MGQxOS1lYzJhLTQwZjQtODNiMS1mZTZmNzE4YWMwODQiDQp9"
+		}
+	}
+}
